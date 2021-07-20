@@ -18,7 +18,11 @@ public class Member {
     @Column(name = "username")
     private String username;
 
-    @ManyToOne // 연관관계 주인
+    @ManyToOne // 연관관계
     @JoinColumn(name = "TEAM_ID")
     private Team team;
+
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
 }
